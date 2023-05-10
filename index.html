@@ -17,18 +17,28 @@
                 <img src="img/bootstrap-logo.svg" class="header__left-imag">
             </div>
             <nav class="nav">
-                <ul class="nav__list" onmousedown="return false" onselectstart="return false">
+                <ul class="nav__list"  onselectstart="return false">
                     <li><a href="#">MAIN</a></li>
                     <li><a href="#">SHOP</a></li>
                     <li class="drop__down-menu">
                         <a href="#" class="drop__down" id="drop__down">DROP DOWN LIST</a>
+                        <div class="drop__down-list-wrap">
                         <ul class="drop__down-list">
-                            <li><a href="#" class="drop__down-link">EFIOPIYA</a></li>
+                            <li>
+                                <a href="#" class="drop__down-link">EFIOPIYA</a>
+                            </li>
                             <li><a href="#" class="drop__down-link">KENIA</a></li>
                             <li><a href="#" class="drop__down-link">COLAMBIA</a></li>
                             <li><a href="#" class="drop__down-link">QUATEMOLA</a></li>
                             <li><a href="#" class="drop__down-link">ALL COFFEE</a></li>
                         </ul>
+                    </div>
+                    </li>
+                    <li>
+                        <form id="form__search__coffee" class="form__search__coffee">
+                            <input type="text" name="searchCofee" id="search__cofee" class="search__cofee" placeholder="search...">
+                            <input type="submit" value="&#128269;" id="btn__form" class="btn__form">
+                        </form>
                     </li>
                     <li><a href="#">SHOPING CART</a></li>
                 </ul>
@@ -43,13 +53,49 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla amet odit dolores labore enim, aliquam perferendis, adipisci explicabo voluptatibus nostrum laboriosam, eligendi beatae sit? Voluptate laborum nemo possimus dignissimos molestias.</p>
             </div>
             <div class="shop__body">
-               
+               <!-- <div class="shop__item">
+                <div class="shop__img shop__img_bg1">
+                    <a href="#" class="modal__buy">SHOW</a>
+                </div>
+                <h3>EFIOPIYA</h3>
+               </div>
+               <div class="shop__item">
+                <div class="shop__img shop__img_bg2">
+                    <a href="#" class="modal__buy">SHOW</a>
+                </div>
+                <h3>KENIA</h3>
+               </div>
+               <div class="shop__item">
+                <div class="shop__img shop__img_bg3">
+                    <a href="#" class="modal__buy">SHOW</a>
+                </div>
+                <h3>COLAMBIA</h3>
+               </div>
+               <div class="shop__item">
+                <div class="shop__img shop__img_bg4">
+                    <a href="#" class="modal__buy">SHOW</a>
+                </div>
+                <h3>QUATEMOLA</h3>
+               </div> -->
             </div>
-        </div>
+
+            <!-- <div class="description__item">
+                    <div class="description__img shop__img_bg4">
+                        <div class="description__closs">x</div>
+                    </div>
+                    <h3 class="description__title">Efiopiya hard cofee 100g</h3>
+                    <hr>
+                    <p class="description__text">ipsum dolor sit amet consectetur adipisicing elit. Nulla amet odit dolores labore enim, aliquam perferendis, adipisci explicabo voluptatibus nostrum laboriosam, eligendi beatae sit? Voluptate laborum nemo possimus dignissimos molestias.</p>
+                    <hr>
+                    <p class="description__price">Price: 11$</p>
+                    <hr>
+                    <a href="#" class="description__btn">ADD TO SHOPPING</a>
+            </div> -->
+
         </div>
     </section>
-
     <script src="index.js"></script>
+    <script src='shopCard.js'></script>
 </body>
 
 </html>
