@@ -41,40 +41,35 @@ const initialCards = [{
     name: 'QUATEMOLA',
 }];
 
+function addCardToShop(clickedId){
+    const arrCards = JSON.parse(localStorage.getItem('cards'));
+    const obj = arrCards.find(el=>el.id == clickedId);
+
+    const shopCards = JSON.parse(localStorage.getItem('cards1')) || [];
+    const ob = shopCards.find(el=>el.id == clickedId);
+
+    if(ob){
+        ob.count++;
+    } else{
+        obj.count = 1;
+        shopCards.push(obj);
+    }
+localStorage.setItem('cards1', JSON.stringify(shopCards));
+}
+
+
 addCoffee(initialCards);
 
 function workWithCard(ev){
     ev.preventDefault();
     if(ev.target.classList.contains('modal__buy')){
-        if (ev.target.dataset.category) {
+        if (ev.target?.dataset.category) {
             const arr = cards.filter(el => el.data.toUpperCase() === ev.target.dataset.category.toUpperCase());   
             addCoffee(arr); 
         }
-        if (ev.target.dataset.nameId) {
-            console.log(111);
-         // обработка событий при добавлении в корзину
-
-        //  let div = document.createElement('div');
-        //  let ofDiv = document.createElement('div');
-        //  let h3 = document.createElement('h3');
-        //  let a = document.createElement('a');
-        //  const reg = /\d+(?=.png)/gi;
-        //  const ind = arr[i].img.match(reg)[0];
-        //  a.href = '#';
-        //  if(arr[i].id){
-        //      a.setAttribute('data-name-id', arr[i].id);
-        //      a.innerHTML = 'ADD TO SHOPPING';
-        //  } else{
-        //      a.setAttribute('data-category', arr[i].name);
-        //      a.innerHTML = 'SHOW';
-        //  }
-        //  a.classList.add('modal__buy');
-        //  div.classList.add('shop__item');
-        //  div.insertAdjacentElement('beforeend', ofDiv);
-        //  ofDiv.insertAdjacentElement('beforeend', a);
-        //  div.insertAdjacentElement('beforeend', h3);
-        //  ofDiv.classList.add('shop__img', `shop__img_bg${ind}`);
-        //  h3.innerHTML = arr[i].name;
+        if (ev.target?.dataset.nameId) {
+            console.log(ev.target?.dataset.nameId);
+            addCardToShop(ev.target?.dataset.nameId);
         }
     }
     if(ev.target.classList.contains('show__description')){
@@ -82,7 +77,7 @@ function workWithCard(ev){
         addModalDescription(shopItem, ev, this);
     }
     if(ev.target.classList.contains('description__btn')){
-        console.log(111);
+
     }
 }
 
@@ -327,3 +322,5 @@ const cards = [
     },
 ];
 
+
+localStorage.setItem('cards', JSON.stringify(cards));
