@@ -177,8 +177,6 @@ shopCart.addEventListener('click', openShopCart);
 localStorage.setItem('cards', JSON.stringify(cards));
 addCoffee(initialCards);
 
-
-
 function decrement(ob){
     const itemsCard = JSON.parse(localStorage.getItem('cards1'));
     const parent = ob.closest('.shopping__basket-item');
@@ -309,8 +307,7 @@ function addCardToShop(clickedId){
         obj.count = 1;
         shopCards.push(obj);
     }
-    console.log(shopCards);
-localStorage.setItem('cards1', JSON.stringify(shopCards));
+    localStorage.setItem('cards1', JSON.stringify(shopCards));
 }
 
 function workWithCard(ev){
