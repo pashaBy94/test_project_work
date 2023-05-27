@@ -13,15 +13,15 @@
     <section class="header">
         <div class="container">
             <div class="header__wrap">
-            <div class="header__left">
+            <div class="header__left"> 
                 <img src="img/bootstrap-logo.svg" class="header__left-imag">
             </div>
             <nav class="nav">
                 <ul class="nav__list"  onselectstart="return false">
-                    <li><a href="#">MAIN</a></li>
-                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#" class="nav__list-link"><img src="img/icons8-user-ios-16-glyph/icons8-user-30.png"><span>MAIN</span></a></li>
+                    <li><a href="#" class="nav__list-link"><img src="img/icons8-market-50.png"><span>SHOP</span></a></li>
                     <li class="drop__down-menu">
-                        <a href="#" class="drop__down" id="drop__down">DROP DOWN LIST</a>
+                        <a href="#" class="drop__down nav__list-link" id="drop__down"><img src="img/icons8-list-50.png"> <span>CATEGORY</span></a>
                         <div class="drop__down-list-wrap">
                         <ul class="drop__down-list">
                             <li>
@@ -37,73 +37,82 @@
                     <li>
                         <form id="form__search__coffee" class="form__search__coffee">
                             <input type="text" name="searchCofee" id="search__cofee" class="search__cofee" placeholder="search...">
-                            <input type="submit" value="&#128269;" id="btn__form" class="btn__form">
+                            <button id="btn__form" class="btn__form"><img src="img/icons8-search-windows-metro/icons8-search-26.png" width="25px"></button>
+                        
                         </form>
                     </li>
-                    <li><a href="#" id="shop__cart">SHOPING CART</a></li>
+                    <li>
+                        <a href="#" id="shop__cart" class="nav__list-link">
+                            <img src="img/icons8-cart-ios-16-filled/icons8-cart-50.png" width="25px">
+                            <span>SHOP CART</span> 
+                            <div class="shop__cart_count"></div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </section>
     <section class="shop">
         <div class="container">
-            <div class="shop__content">
-                <h2 class="shop__title">SHOP</h2>
-                <img src="img/s2-separator.png">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla amet odit dolores labore enim, aliquam perferendis, adipisci explicabo voluptatibus nostrum laboriosam, eligendi beatae sit? Voluptate laborum nemo possimus dignissimos molestias.</p>
-            </div>
-
-            <div class="shop__body">
-               <!-- <div class="shop__item">
-                <div class="shop__img shop__img_bg1">
-                    <a href="#" class="modal__buy">SHOW</a>
+            <div class="shop__wrap__content">
+                <div class="shop__content">
+                    <h2 class="shop__title">SHOP</h2>
+                    <img src="img/s2-separator.png">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla amet odit dolores labore enim, aliquam perferendis, adipisci explicabo voluptatibus nostrum laboriosam, eligendi beatae sit? Voluptate laborum nemo possimus dignissimos molestias.</p>
                 </div>
-                <h3>EFIOPIYA</h3>
-               </div>
-               <div class="shop__item">
-                <div class="shop__img shop__img_bg2">
-                    <a href="#" class="modal__buy">SHOW</a>
+                <div class="shop__body">
+                <!-- <div class="shop__item">
+                    <div class="shop__img shop__img_bg1">
+                        <a href="#" class="modal__buy">SHOW</a>
+                    </div>
+                    <h3>EFIOPIYA</h3>
                 </div>
-                <h3>KENIA</h3>
-               </div>
-               <div class="shop__item">
-                <div class="shop__img shop__img_bg3">
-                    <a href="#" class="modal__buy">SHOW</a>
+                <div class="shop__item">
+                    <div class="shop__img shop__img_bg2">
+                        <a href="#" class="modal__buy">SHOW</a>
+                    </div>
+                    <h3>KENIA</h3>
                 </div>
-                <h3>COLAMBIA</h3>
-               </div>
-               <div class="shop__item">
-                <div class="shop__img shop__img_bg4">
-                    <a href="#" class="modal__buy">SHOW</a>
+                <div class="shop__item">
+                    <div class="shop__img shop__img_bg3">
+                        <a href="#" class="modal__buy">SHOW</a>
+                    </div>
+                    <h3>COLAMBIA</h3>
                 </div>
-                <h3>QUATEMOLA</h3>
-               </div> -->
-            </div>
-
-            <div class="shopping__basket">  
-                <div class="shopping__basket-body">
-                    <form class="shopping__basket-form">
-                        <div class="shopping__basket-header">
-                            <div class="shopping__basket-title">SHOPPING BASKET</div>
-                            <img src="img/delete.png" class="description__closs shopping__basket-close">
-                        </div>
-                        <hr>
-                        <div class="shopping__basket-items">
-                            <div class="shopping__basket-empty">
-                                Shopping cart is empty.
+                <div class="shop__item">
+                    <div class="shop__img shop__img_bg4">
+                        <a href="#" class="modal__buy">SHOW</a>
+                    </div>
+                    <h3>QUATEMOLA</h3>
+                </div> -->
+                </div>
+                <div class="shopping__basket">  
+                    <div class="shopping__basket-body">
+                        <form class="shopping__basket-form">
+                            <div class="shopping__basket-header">
+                                <div class="shopping__basket-title">SHOPPING BASKET</div>
+                                <img src="img/delete.png" class="description__closs shopping__basket-close">
                             </div>
-                        </div>
-                        <hr>
-                        <div class="shopping__basket-total">
-                            <p>TOTAL:</p>
-                            <p class="shopping__basket-total-price"></p>
-                        </div>
-                        <hr>
-                        <input type="submit" value="BUY" class="shopping__basket-button">
-                    </form>
+                            <hr>
+                            <div class="shopping__basket-items">
+                                <div class="shopping__basket-empty">
+                                    Shopping cart is empty.
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="shopping__basket-total">
+                                <p>TOTAL:</p>
+                                <p class="shopping__basket-total-price"></p>
+                            </div>
+                            <hr>
+                            <div class="shopping__basket-clear-wrap">
+                                <div class="shopping__basket-clear">CLEAR BASKET</div>
+                            </div>
+                            <input type="submit" value="BUY" class="shopping__basket-button">
+                        </form>
+                    </div>
                 </div>
             </div>
-
             <!-- <div class="description__item">
                     <div class="description__img shop__img_bg4">
                         <div class="description__closs">x</div>
@@ -119,8 +128,69 @@
 
         </div>
     </section>
-    <script src="index.js"></script>
+    <!-- <section class="carousel__coffe">
+        <div class="container">
+            <div class="carousel__list">
+                <div class="carousel__list-wrap">
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+     
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div> 
+                    <div class="carousel__item">
+                        <div class="carousel__item-img shop__img_bg4">
+
+                        </div>
+                    </div>   
+                </div>
+                <div class="carousel__list-left"><</div>
+                <div class="carousel__list-right">></div>
+            </div>
+        </div>
+    </section> -->
+    <script src="helper.js"></script>
     <script src='shopCard.js'></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
